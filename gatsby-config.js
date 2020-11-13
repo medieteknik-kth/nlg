@@ -5,6 +5,7 @@ module.exports = {
     author: [`Kristina Andersson`, `Martin Ryberg Laude`],
   },
   plugins: [
+    'gatsby-plugin-root-import',
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
