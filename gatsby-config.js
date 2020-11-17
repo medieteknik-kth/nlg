@@ -5,7 +5,7 @@ module.exports = {
     author: [`Kristina Andersson`, `Martin Ryberg Laude`],
   },
   plugins: [
-    'gatsby-plugin-root-import',
+    "gatsby-plugin-root-import",
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/nlg-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
