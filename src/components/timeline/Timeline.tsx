@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import TimelineItem from "./TimelineItem"
 import { FluidObject } from "gatsby-image"
+import styles from "./timeline.module.scss"
 
 interface EdgeInterface {
   node: {
@@ -51,35 +52,20 @@ const Timeline: React.FC = () => {
   `)
 
   return (
-    <div
-      style={{
-        minHeight: `90vh`,
-      }}
-    >
-      <h1>Timeline</h1>
-      <div
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `center`,
-        }}
-      >
-        {data
-          ? data?.allMarkdownRemark?.edges.map(edge => {
-              return (
-                <div>
-                  <TimelineItem
-                    title={edge?.node?.frontmatter?.title}
-                    date={edge?.node?.frontmatter?.date}
-                    fluid={
-                      edge?.node?.frontmatter?.image?.childImageSharp?.fluid
-                    }
-                  />
-                </div>
-              )
-            })
-          : "No items to show"}
-      </div>
+    <div className={styles.timeline}>
+      {data
+        ? data?.allMarkdownRemark?.edges.map(edge => {
+            return (
+              <div>
+                <TimelineItem
+                  title={edge?.node?.frontmatter?.title}
+                  date={edge?.node?.frontmatter?.date}
+                  fluid={edge?.node?.frontmatter?.image?.childImageSharp?.fluid}
+                />
+              </div>
+            )
+          })
+        : "No items to show"}
     </div>
   )
 }

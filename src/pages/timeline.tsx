@@ -1,12 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Timeline from "../components/timeline/Timeline"
 
 const Contact: React.FC = () => {
   return (
     <Layout>
-      <SEO title="Kontakt" />
-      <h1>Kontakta oss</h1>
+      <SEO title="Timeline" />
+      <h1>Timeline</h1>
+      <Timeline />
     </Layout>
   )
 }

@@ -1,0 +1,10 @@
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.timeline-item {
+  width: 31vw;
+  background: #fff;
+}

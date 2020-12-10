@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
-import "./layout.css"
+import Header from "../components/header"
 
 interface Props {
   children?: React.ReactNode
@@ -9,17 +8,18 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query HomePageQuery {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
   `)
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header />
       <div
         style={{
           margin: `0 auto`,
@@ -33,9 +33,11 @@ const Layout: React.FC<Props> = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          © {new Date().getFullYear()},{" "}
+          {data.site.siteMetadata.author.map(
+            (author: string, i: number, arr: []) =>
+              `${author} ${i != arr.length - 1 ? "och " : ""}`
+          )}
         </footer>
       </div>
     </>
