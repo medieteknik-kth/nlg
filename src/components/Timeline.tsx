@@ -1,19 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import TimelineItem from "./TimelineItem"
-// import { FluidObject } from "gatsby-image"
-
-interface FluidObjectInterface {
-  aspectRatio: number
-  src: string
-  srcSet: string
-  sizes: string
-  base64?: string
-  tracedSVG?: string
-  srcWebp?: string
-  srcSetWebp?: string
-  media?: string
-}
+import { FluidObject } from "gatsby-image"
 
 interface EdgeInterface {
   node: {
@@ -21,7 +9,7 @@ interface EdgeInterface {
     frontmatter: {
       image: {
         childImageSharp: {
-          fluid: FluidObjectInterface | FluidObjectInterface[]
+          fluid: FluidObject | FluidObject[]
         }
       }
       title: React.ReactNode
@@ -61,7 +49,6 @@ const Timeline: React.FC = () => {
       }
     }
   `)
-  console.log(data)
 
   return (
     <div
@@ -77,17 +64,21 @@ const Timeline: React.FC = () => {
           justifyContent: `center`,
         }}
       >
-        {data.allMarkdownRemark.edges.map(edge => {
-          return (
-            <div>
-              <TimelineItem
-                title={edge.node.frontmatter.title}
-                date={edge.node.frontmatter.date}
-                fluid={edge?.node?.frontmatter?.image?.childImageSharp?.fluid}
-              />
-            </div>
-          )
-        })}
+        {data
+          ? data?.allMarkdownRemark?.edges.map(edge => {
+              return (
+                <div>
+                  <TimelineItem
+                    title={edge?.node?.frontmatter?.title}
+                    date={edge?.node?.frontmatter?.date}
+                    fluid={
+                      edge?.node?.frontmatter?.image?.childImageSharp?.fluid
+                    }
+                  />
+                </div>
+              )
+            })
+          : "No items to show"}
       </div>
     </div>
   )
