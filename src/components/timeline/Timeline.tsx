@@ -10,7 +10,7 @@ interface EdgeInterface {
     frontmatter: {
       image: {
         childImageSharp: {
-          fluid: FluidObject | FluidObject[]
+          fluid: FluidObject | undefined
         }
       }
       title: React.ReactNode
@@ -52,21 +52,21 @@ const Timeline: React.FC = () => {
   `)
 
   return (
-    <div className={styles.timeline}>
+    <ol className={styles.timeline}>
       {data
         ? data?.allMarkdownRemark?.edges.map(edge => {
             return (
-              <div>
+              <li>
                 <TimelineItem
                   title={edge?.node?.frontmatter?.title}
                   date={edge?.node?.frontmatter?.date}
                   fluid={edge?.node?.frontmatter?.image?.childImageSharp?.fluid}
                 />
-              </div>
+              </li>
             )
           })
         : "No items to show"}
-    </div>
+    </ol>
   )
 }
 
