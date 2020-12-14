@@ -54,9 +54,9 @@ const Timeline: React.FC = () => {
   return (
     <ol className={styles.timeline}>
       {data
-        ? data?.allMarkdownRemark?.edges.map(edge => {
+        ? data?.allMarkdownRemark?.edges.map((edge, index) => {
             return (
-              <li>
+              <li key={index}>
                 <TimelineItem
                   title={edge?.node?.frontmatter?.title}
                   date={edge?.node?.frontmatter?.date}

@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
   return (
     <Layout>
       <SEO title="Timeline" />
-      <h1>Timeline</h1>
+      <h1>Tidslinje</h1>
       <Timeline />
     </Layout>
   )

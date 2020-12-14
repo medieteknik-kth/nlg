@@ -35,7 +35,7 @@ export default function Header(props: Props) {
               className={styles.navItem + " " + getActiveClass(1)}
               to="/timeline"
             >
-              Timeline
+              Tidslinje
             </Link>
           </li>
           <li>
@@ -47,7 +47,7 @@ export default function Header(props: Props) {
             </Link>
           </li>
           <li>
-            <Link className={styles.navItem + " " + getActiveClass(3)} to="">
+            <Link className={styles.navItem + " " + getActiveClass(3)} to="/">
               Om oss
             </Link>
           </li>
