@@ -4,9 +4,9 @@ date: "2020-12-07"
 image: "./mpya-event.JPG"
 ---
 
-This is our first post
+### What is in this post
 
-## What is in this post
+![MPYA](./mpya-event.JPG)
 
-- This is a post about a post
+- This post is just a template post that will later be filled with meaningful stuff
 - We are super excited
