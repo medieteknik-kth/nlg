@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import TimelineItem from "./TimelineItem"
 import { FluidObject } from "gatsby-image"
 import styles from "./timeline.module.scss"
@@ -16,6 +16,9 @@ interface EdgeInterface {
       title: React.ReactNode
       date: React.ReactNode
       description?: React.ReactNode
+    }
+    fields: {
+      slug: string
     }
   }
   html: any // ???
@@ -45,6 +48,9 @@ const Timeline: React.FC = () => {
                 }
               }
             }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -57,11 +63,18 @@ const Timeline: React.FC = () => {
         ? data?.allMarkdownRemark?.edges.map((edge, index) => {
             return (
               <li key={index}>
-                <TimelineItem
-                  title={edge?.node?.frontmatter?.title}
-                  date={edge?.node?.frontmatter?.date}
-                  fluid={edge?.node?.frontmatter?.image?.childImageSharp?.fluid}
-                />
+                <Link
+                  to={`/timeline/${edge?.node?.fields?.slug}`}
+                  className={styles.styledLink}
+                >
+                  <TimelineItem
+                    title={edge?.node?.frontmatter?.title}
+                    date={edge?.node?.frontmatter?.date}
+                    fluid={
+                      edge?.node?.frontmatter?.image?.childImageSharp?.fluid
+                    }
+                  />
+                </Link>
               </li>
             )
           })

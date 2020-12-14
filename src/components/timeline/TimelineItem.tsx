@@ -12,7 +12,9 @@ interface Props {
 const TimelineItem: React.FC<Props> = ({ title, date, fluid }) => {
   return (
     <div className={styles.timelineItem}>
-      {fluid && <Image fluid={fluid} alt="Banner Image" />}
+      {fluid && (
+        <Image fluid={fluid} className={styles.image} alt="Banner Image" />
+      )}
       <h2>{title}</h2>
       <h4>{date}</h4>
     </div>
