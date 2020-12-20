@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 
 const Contact: React.FC = () => {
   return (
-    <Layout>
+    <Layout page={2}>
       <SEO title="Kontakt" />
       <h1>Kontakta oss</h1>
     </Layout>

@@ -3,10 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "../components/header"
 
 interface Props {
+  page: number
   children?: React.ReactNode
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children, page }) => {
   const data = useStaticQuery(graphql`
     query HomePageQuery {
       site {
@@ -19,7 +20,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   `)
   return (
     <>
-      <Header />
+      <Header page={page} />
       <div
         style={{
           margin: `0 auto`,

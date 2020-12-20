@@ -10,7 +10,7 @@ interface Props {
 export default function Header(props: Props) {
   // Adds active styles if page number matches
   function getActiveClass(page: number): string {
-    return page === props.page ? "active" : ""
+    return page == props.page ? "active" : ""
   }
 
   return (
@@ -32,7 +32,7 @@ export default function Header(props: Props) {
           </li>
           <li>
             <Link
-              className={styles.navItem + " " + getActiveClass(1)}
+              className={styles.navItem + " " + styles[getActiveClass(1)]}
               to="/timeline"
             >
               Tidslinje
@@ -40,14 +40,14 @@ export default function Header(props: Props) {
           </li>
           <li>
             <Link
-              className={styles.navItem + " " + getActiveClass(2)}
+              className={styles.navItem + " " + styles[getActiveClass(2)]}
               to="/contact"
             >
               Kontakt
             </Link>
           </li>
           <li>
-            <Link className={styles.navItem + " " + getActiveClass(3)} to="/">
+            <Link className={styles.navItem + " " + styles[getActiveClass(3)]} to="/">
               Om oss
             </Link>
           </li>
