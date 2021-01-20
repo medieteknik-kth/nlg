@@ -16,11 +16,13 @@ export default function Footer() {
 
   return (
     <footer className={styles.containerMain}>
+      <p>
       © {new Date().getFullYear()},{" "}
           {data.site.siteMetadata.author.map(
             (author: string, i: number, arr: []) =>
               `${author} ${i != arr.length - 1 ? "och " : ""}`
           )}
+      </p>
     </footer>
   )
 }

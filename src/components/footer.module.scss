@@ -6,4 +6,7 @@
   align-items: center;
   justify-content: center;
   background-color: $color-background-footer;
+  p {
+    color: $color-text-primary-inv;
+  }
 }
