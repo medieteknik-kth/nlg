@@ -5,7 +5,7 @@ import Timeline from "../components/timeline/Timeline"
 
 const Contact: React.FC = () => {
   return (
-    <Layout page={1}>
+    <Layout page={1} title="timeline">
       <SEO title="Timeline" />
       <h1>Tidslinje</h1>
       <Timeline />
