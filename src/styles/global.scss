@@ -40,16 +40,12 @@ h1 {
 }
 
 h2 {
+  margin: 0;
+  margin-top: 12px;
   font-weight: 600;
   font-size: 26px;
   color: $color-text-primary;
-  text-align: center;
-  margin: 0 auto;
-  display: inline-block;
-  background: linear-gradient(
-    transparent calc(100% - 0.5em),
-    rgba($color-primary, 0.3) 0.5em
-  );
+  text-align: start;
 }
 
 h3 {
@@ -59,6 +55,16 @@ h3 {
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  color: $color-text-secondary;
+  text-align: start;
 }
 
 p {
@@ -107,10 +113,6 @@ button {
 @media (min-width: 480px) {
   h1 {
     font-size: 48px;
-  }
-
-  h2 {
-    font-size: 36px;
   }
 
   h3 {

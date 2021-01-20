@@ -15,8 +15,8 @@ const TimelineItem: React.FC<Props> = ({ title, date, fluid }) => {
       {fluid && (
         <Image fluid={fluid} className={styles.image} alt="Banner Image" />
       )}
-      <h2>{title}</h2>
       <h4>{date}</h4>
+      <h2>{title}</h2>
     </div>
   )
 }

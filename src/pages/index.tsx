@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import { Link } from "gatsby"
 import { FaFacebook, FaInstagram} from 'react-icons/fa'
 import Layout from "src/components/layout"
+import Timeline from "src/components/timeline/Timeline"
 
 export default function Index() {
   return (
@@ -21,6 +22,7 @@ export default function Index() {
           <Link to="http://www.instagram.com/nlg_medieteknik"><FaInstagram className={styles.icon}/></Link>
         </div>
       </div>
+      <Timeline/>
     </Layout>
   )
 }
