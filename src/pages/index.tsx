@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styles from './index.module.scss'
 import { Link } from "gatsby"
 import { FaFacebook, FaInstagram} from 'react-icons/fa'
@@ -6,9 +6,23 @@ import Layout from "src/components/layout"
 import Timeline from "src/components/timeline/Timeline"
 
 export default function Index() {
+  
+  const [pageNumber, setPageNumber] = useState(0)
+  useEffect(() => {
+    document.addEventListener("scroll", adjustPageNumber);
+    return () => {
+      document.removeEventListener("scroll", adjustPageNumber)
+    }
+  }, [pageNumber])
+
+  function adjustPageNumber() {
+    let scrolled = document.scrollingElement?.scrollTop
+    if (scrolled != null) scrolled > 512 ? setPageNumber(1) : setPageNumber(0)
+  }
+
   return (
-    <Layout page={0} title="Hem">
-      <div className={styles.containerMain}>
+    <Layout page={pageNumber} title="Hem">
+      <div className={styles.containerMain} id="home">
         <div className={styles.containerHero}>
           <h1>Näringslivsgruppen</h1>
           <p>Lorem ipsum dolor sit amet</p>
@@ -18,7 +32,7 @@ export default function Index() {
           </div>
         </div>
         <div className={styles.containerMedia}>
-          <Link to="https://www.facebook.com/NLGmedieteknik"><FaFacebook className={styles.icon}/></Link>
+          <Link id="timeline" to="https://www.facebook.com/NLGmedieteknik"><FaFacebook className={styles.icon}/></Link>
           <Link to="http://www.instagram.com/nlg_medieteknik"><FaInstagram className={styles.icon}/></Link>
         </div>
       </div>

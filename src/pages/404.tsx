@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import styles from "./404.module.scss"
-import SEO from 'src/components/seo'
 
 export default function NotFound() {
     return (

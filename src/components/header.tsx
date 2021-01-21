@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
 import styles from "./header.module.scss"
 import logo from "src/images/nlg-icon.png"
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 interface Props {
   // Page number, first page is 0
@@ -19,7 +20,7 @@ export default function Header(props: Props) {
 
   function adjustBackground() {
     let scrolled = document.scrollingElement?.scrollTop
-    if (scrolled != null) scrolled > 120 ? setBackgroundClass(styles.background) : setBackgroundClass("")
+    if (scrolled != null) scrolled > 0 ? setBackgroundClass(styles.background) : setBackgroundClass("")
   }
   // Adds active styles if page number matches
   function getActiveClass(page: number): string {
@@ -36,20 +37,34 @@ export default function Header(props: Props) {
         <ul>
           {/* TODO: Add proper links */}
           <li>
-            <Link
-              className={styles.navItem + " " + styles[getActiveClass(0)]}
-              to="/"
-            >
-              Hem
-            </Link>
+            {window.location.pathname !== "/" && window.location.pathname !== "/#home" && window.location.pathname !== "/#timeline" ?
+              <Link
+                className={styles.navItem + " " + styles[getActiveClass(0)]}
+                to="/#home"
+              >
+                Hem
+              </Link>
+            :  
+              <AnchorLink className={styles.navItem + " " + styles[getActiveClass(0)]} 
+                href="#home">
+                Hem
+              </AnchorLink>
+            }
           </li>
           <li>
-            <Link
-              className={styles.navItem + " " + styles[getActiveClass(1)]}
-              to="/timeline"
-            >
-              Tidslinje
-            </Link>
+            {window.location.pathname !== "/" && window.location.pathname !== "/#home" && window.location.pathname !== "/#timeline" ?
+              <Link
+                className={styles.navItem + " " + styles[getActiveClass(1)]}
+                to="/#timeline"
+              >
+                Tidslinje
+              </Link>
+            :
+              <AnchorLink className={styles.navItem + " " + styles[getActiveClass(1)]} 
+                href="#timeline">
+                Tidslinje
+              </AnchorLink>
+            }
           </li>
           <li>
             <Link
