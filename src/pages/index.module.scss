@@ -7,6 +7,9 @@
     rgba(0, 0, 0, 0) 0%,
     rgb(255, 250, 208) 100%
   );
+  @media not all and (hover: hover) {
+    height: 80vh;
+  }
 }
 .containerHero {
   width: 100%;

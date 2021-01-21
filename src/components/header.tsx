@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
 import styles from "./header.module.scss"
 import logo from "src/images/nlg-icon.png"
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 interface Props {
   // Page number, first page is 0
@@ -40,15 +39,14 @@ export default function Header(props: Props) {
             {window.location.pathname !== "/" && window.location.pathname !== "/#home" && window.location.pathname !== "/#timeline" ?
               <Link
                 className={styles.navItem + " " + styles[getActiveClass(0)]}
-                to="/#home"
+                to="/"
               >
                 Hem
               </Link>
             :  
-              <AnchorLink className={styles.navItem + " " + styles[getActiveClass(0)]} 
-                href="#home">
+              <a onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(0)]}>
                 Hem
-              </AnchorLink>
+              </a>
             }
           </li>
           <li>
@@ -60,10 +58,9 @@ export default function Header(props: Props) {
                 Tidslinje
               </Link>
             :
-              <AnchorLink className={styles.navItem + " " + styles[getActiveClass(1)]} 
-                href="#timeline">
+              <a onClick={() => document.getElementById("timeline")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(1)]} >
                 Tidslinje
-              </AnchorLink>
+              </a>
             }
           </li>
           <li>

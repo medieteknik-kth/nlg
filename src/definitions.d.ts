@@ -6,4 +6,3 @@ declare module "*.png" {
   const value: any;
   export = value;
 }
-declare module 'react-anchor-link-smooth-scroll';
