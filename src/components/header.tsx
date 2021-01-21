@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styles from "./header.module.scss"
 import logo from "src/images/nlg-icon.png"
 
@@ -8,13 +8,26 @@ interface Props {
   page: number
 }
 export default function Header(props: Props) {
+
+  const [backgroundClass, setBackgroundClass] = useState("")
+  useEffect(() => {
+    document.addEventListener("scroll", adjustBackground);
+    return () => {
+      document.removeEventListener("scroll", adjustBackground)
+    }
+  }, [backgroundClass])
+
+  function adjustBackground() {
+    let scrolled = document.scrollingElement?.scrollTop
+    if (scrolled != null) scrolled > 120 ? setBackgroundClass(styles.background) : setBackgroundClass("")
+  }
   // Adds active styles if page number matches
   function getActiveClass(page: number): string {
     return page == props.page ? "active" : ""
   }
 
   return (
-    <header className={styles.container}>
+    <header className={styles.container + " " + backgroundClass}>
       <Link className={styles.titleContainer} to="/">
         <img className={styles.logo} src={logo} />
         <h1 className={styles.title}>Näringslivsgruppen</h1>
