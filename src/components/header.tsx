@@ -68,7 +68,7 @@ export default function Header(props: Props) {
               className={styles.navItem + " " + styles[getActiveClass(2)]}
               to="/contact"
             >
-              Kontakt
+              Samarbete
             </Link>
           </li>
           <li>
