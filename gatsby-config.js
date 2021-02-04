@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Näringslivsgruppen`,
+    title: `Näringslivsgruppen Medieteknik`,
     description: ``,
     author: [`Kristina Andersson`, `Martin Ryberg Laude`],
   },
@@ -20,11 +20,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Näringslivsgruppen Medieteknik`,
+        short_name: `Näringslivsgruppen`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `src/images/nlg-icon.png`, // This path is relative to the root of the site.
       },
