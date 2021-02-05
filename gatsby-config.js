@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Näringslivsgruppen Medieteknik`,
+    title: `Näringslivsgruppen`,
     description: ``,
     author: [`Kristina Andersson`, `Martin Ryberg Laude`],
   },
