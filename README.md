@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Näringslivsgruppen" src="http://www.medieteknik.com/sites/default/files/styles/700_width/public/nlg-logo-site.png?itok=u6mqiBQI" width="60" />
+  <img alt="Näringslivsgruppen" src="https://www.medieteknik.com/static/committees/nlg.png" width="60" />
 </p>
 <h1 align="center">
   Näringslivsgruppens hemsida
@@ -14,18 +14,20 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
     Använd git för att klona denna repository, eller ladda ner den.
 
     ```shell
-    # klona repositoryn till en lokal mapp
+    # klona repositoryt till en lokal mapp
     git clone https://github.com/medieteknik-kth/nlg.git
     ```
 
 2.  **Installera**
 
-    Öppna kommandotolken eller powershell i den klonade mappen och installera alla dependencies.
+    Öppna kommandotolken/terminalen eller powershell i den klonade mappen och installera alla dependencies.
 
     ```shell
     cd nlg
     npm install
     ```
+    
+     Skapa sedan en environment-fil i rot-mappen (.env)
 
 3.  **Starta sidan**
 
@@ -34,7 +36,7 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
     ```shell
     npm start
     ```
-
+    
 ## 🧐 Teknologier
 
 - Gatsby
@@ -58,3 +60,4 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
 - Om committen är broken, skriv det i meddelandet
 - Micro-commits uppmanas
 - Main och dev branches används
+- Issues och projekt-vyn 
