@@ -7,7 +7,7 @@ import Timeline from "src/components/timeline/Timeline"
 
 export default function Index() {
   cleanURL()
-  
+
   const [pageNumber, setPageNumber] = useState(0)
   useEffect(() => {
     document.addEventListener("scroll", adjustPageNumber);
@@ -42,8 +42,8 @@ export default function Index() {
           </div>
         </div>
         <div className={styles.containerMedia}>
-          <Link id="timeline" to="https://www.facebook.com/NLGmedieteknik"><FaFacebook className={styles.icon}/></Link>
-          <Link to="http://www.instagram.com/nlg_medieteknik"><FaInstagram className={styles.icon}/></Link>
+          <a id="timeline" href="https://www.facebook.com/NLGmedieteknik"><FaFacebook className={styles.icon}/></a>
+          <a href="http://www.instagram.com/nlg_medieteknik"><FaInstagram className={styles.icon}/></a>
         </div>
       </div>
       <Timeline/>
