@@ -6,6 +6,7 @@ import Layout from "src/components/layout"
 import Timeline from "src/components/timeline/Timeline"
 
 export default function Index() {
+  cleanURL()
   
   const [pageNumber, setPageNumber] = useState(0)
   useEffect(() => {
@@ -14,6 +15,15 @@ export default function Index() {
       document.removeEventListener("scroll", adjustPageNumber)
     }
   }, [pageNumber])
+
+  function cleanURL() {
+    const hashtag = window.location.hash
+    if (hashtag) {
+      const currentURL = window.location.href
+      const newURL = currentURL.split("#")[0]
+      window.history.replaceState("", "Lunch", newURL)
+    }
+  }
 
   function adjustPageNumber() {
     let scrolled = document.scrollingElement?.scrollTop
