@@ -34,7 +34,6 @@ export default function Header(props: Props) {
       </Link>
       <nav>
         <ul>
-          {/* TODO: Add proper links */}
           <li>
             {window.location.pathname !== "/" && window.location.pathname !== "/#home" && window.location.pathname !== "/#timeline" ?
               <Link
@@ -44,7 +43,7 @@ export default function Header(props: Props) {
                 Hem
               </Link>
             :  
-              <a href="javascript:;" onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(0)]}>
+              <a onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(0)]}>
                 Hem
               </a>
             }
@@ -58,7 +57,7 @@ export default function Header(props: Props) {
                 Tidslinje
               </Link>
             :
-              <a href="javascript:;" onClick={() => document.getElementById("timeline")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(1)]} >
+              <a onClick={() => document.getElementById("timeline")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(1)]} >
                 Tidslinje
               </a>
             }
