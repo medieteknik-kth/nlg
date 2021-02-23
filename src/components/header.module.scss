@@ -59,10 +59,12 @@
   color: $color-text-primary;
   font-weight: 700;
   &:hover {
+    background: none;
     cursor: pointer;
     opacity: 0.5;
   }
   &:active {
+    background: none;
     color: $color-text-primary;
   }
 }

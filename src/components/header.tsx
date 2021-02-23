@@ -44,7 +44,7 @@ export default function Header(props: Props) {
                 Hem
               </Link>
             :  
-              <a tabIndex={0} onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(0)]}>
+              <a href="javascript:;" onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(0)]}>
                 Hem
               </a>
             }
@@ -58,7 +58,7 @@ export default function Header(props: Props) {
                 Tidslinje
               </Link>
             :
-              <a tabIndex={0} onClick={() => document.getElementById("timeline")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(1)]} >
+              <a href="javascript:;" onClick={() => document.getElementById("timeline")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(1)]} >
                 Tidslinje
               </a>
             }
