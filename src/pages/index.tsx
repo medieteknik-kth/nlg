@@ -35,7 +35,7 @@ export default function Index() {
       <div className={styles.containerMain} id="home">
         <div className={styles.containerHero}>
           <h1>Näringslivsgruppen</h1>
-          <p>Lorem ipsum dolor sit amet</p>
+          <p>Vi får ert företag att synas och höras för medietekniker på KTH</p>
           <div className={styles.containerLinks}>
             <Link className={"btn " + styles.btn} to="/contact">Kontakta oss</Link>
             <Link className={"btn " + styles.btnAlt} to="/">Läs mer</Link>
