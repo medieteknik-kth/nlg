@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import { FaFacebook, FaInstagram} from 'react-icons/fa'
 import Layout from "src/components/layout"
 import Timeline from "src/components/timeline/Timeline"
+import background from "src/images/gray_waves.svg"
+import sideimg from "src/images/nlg_med_konturer.svg"
 
 export default function Index() {
   cleanURL()
@@ -33,13 +35,17 @@ export default function Index() {
   return (
     <Layout page={pageNumber} title="Hem">
       <div className={styles.containerMain} id="home">
+        <img className={styles.background} src={background}/>
         <div className={styles.containerHero}>
-          <h1>Näringslivsgruppen</h1>
-          <p>Vi får ert företag att synas och höras för medietekniker på KTH</p>
-          <div className={styles.containerLinks}>
-            <Link className={"btn " + styles.btn} to="/contact">Kontakta oss</Link>
-            <Link className={"btn " + styles.btnAlt} to="/">Läs mer</Link>
+          <div className={styles.containerLeft}>
+            <h1>Näringslivsgruppen</h1>
+            <p>Vi får ert företag att synas och höras för medietekniker på KTH</p>
+            <div className={styles.containerLinks}>
+              <Link className={"btn " + styles.btn} to="/contact">Kontakta oss</Link>
+              <Link className={"btn " + styles.btnAlt} to="/">Läs mer</Link>
+            </div>
           </div>
+          <img className={styles.sideimg} src={sideimg}/>
         </div>
         <div className={styles.containerMedia}>
           <a id="timeline" href="https://www.facebook.com/NLGmedieteknik"><FaFacebook className={styles.icon}/></a>
