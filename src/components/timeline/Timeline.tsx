@@ -62,11 +62,7 @@ const Timeline: React.FC = () => {
       {data
         ? data?.allMarkdownRemark?.edges.map((edge, index) => {
             return (
-              <li key={index}>
-                <Link
-                  to={`/timeline/${edge?.node?.fields?.slug}`}
-                  className={styles.styledLink}
-                >
+              <li key={index} style={{gridRowStart: index+1, gridRowEnd: index+3}}>
                   <TimelineItem
                     title={edge?.node?.frontmatter?.title}
                     date={edge?.node?.frontmatter?.date}
@@ -74,11 +70,12 @@ const Timeline: React.FC = () => {
                       edge?.node?.frontmatter?.image?.childImageSharp?.fluid
                     }
                   />
-                </Link>
               </li>
             )
           })
-        : "No items to show"}
+        : 
+        <p>No items to show</p>
+        }
     </ol>
   )
 }
