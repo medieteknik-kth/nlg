@@ -6,7 +6,7 @@ import styles from "./timeline.module.scss"
 interface EdgeInterface {
   node: {
     title: string
-    publishedDate: string
+    publishedDate: string | undefined
     image: {
       title: string
       fluid: {
