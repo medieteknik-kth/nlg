@@ -6,27 +6,22 @@ import styles from "./timeline.module.scss"
 
 interface EdgeInterface {
   node: {
-    // ???
-    frontmatter: {
-      image: {
-        childImageSharp: {
-          fluid: FluidObject | undefined
-        }
+    title: string
+    publishedDate: string
+    image: {
+      title: string
+      fluid: {
+        src: string
       }
-      title: React.ReactNode
-      date: React.ReactNode
-      description?: React.ReactNode
     }
-    fields: {
-      slug: string
+    description: {
+      description: string | undefined
     }
   }
-  html: any // ???
-  excerpt: any // ???
 }
 
 interface PostDataInterface {
-  allMarkdownRemark: {
+  allContentfulTimelinePost: {
     edges: EdgeInterface[]
   }
 }
@@ -34,22 +29,19 @@ interface PostDataInterface {
 const Timeline: React.FC = () => {
   const data: PostDataInterface = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+      allContentfulTimelinePost(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
-            frontmatter {
-              date(formatString: "MM/DD/YYYY")
+            title
+            publishedDate(formatString: "MMMM Do, YYYY")
+            image {
               title
-              image {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+              fluid(resizingBehavior: FILL) {
+                src
               }
             }
-            fields {
-              slug
+            description {
+              description
             }
           }
         }
@@ -59,23 +51,26 @@ const Timeline: React.FC = () => {
 
   return (
     <ol className={styles.timeline}>
-      {data
-        ? data?.allMarkdownRemark?.edges.map((edge, index) => {
-            return (
-              <li key={index} style={{gridRowStart: index+1, gridRowEnd: index+3}}>
-                  <TimelineItem
-                    title={edge?.node?.frontmatter?.title}
-                    date={edge?.node?.frontmatter?.date}
-                    fluid={
-                      edge?.node?.frontmatter?.image?.childImageSharp?.fluid
-                    }
-                  />
-              </li>
-            )
-          })
-        : 
+      {data ? (
+        data?.allContentfulTimelinePost?.edges.map((edge, index) => {
+          return (
+            <li
+              key={index}
+              style={{ gridRowStart: index + 1, gridRowEnd: index + 3 }}
+            >
+              <TimelineItem
+                title={edge?.node?.title}
+                date={edge?.node?.publishedDate}
+                url={edge?.node?.image?.fluid?.src}
+                alt={edge?.node?.image?.title}
+                description={edge?.node?.description?.description}
+              />
+            </li>
+          )
+        })
+      ) : (
         <p>No items to show</p>
-        }
+      )}
     </ol>
   )
 }

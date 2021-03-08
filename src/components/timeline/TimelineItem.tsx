@@ -1,22 +1,29 @@
 import React from "react"
-import Image, { FluidObject } from "gatsby-image"
 import styles from "./timeline.module.scss"
 
 interface Props {
   title: React.ReactNode
   date: React.ReactNode
   description?: React.ReactNode
-  fluid?: FluidObject
+  url?: string
+  alt?: string
 }
 
-const TimelineItem: React.FC<Props> = ({ title, date, fluid }) => {
+const TimelineItem: React.FC<Props> = ({
+  title,
+  date,
+  url,
+  alt,
+  description,
+}) => {
   return (
     <div className={styles.timelineItem}>
-      {fluid && (
-        <Image fluid={fluid} className={styles.image} alt="Banner Image" />
+      {url && (
+        <img src={url} className={styles.image} alt={alt || "Banner Image"} />
       )}
       <h4>{date}</h4>
       <h2>{title}</h2>
+      <p>{description}</p>
     </div>
   )
 }
