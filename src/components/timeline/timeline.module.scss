@@ -18,11 +18,11 @@
 }
 
 .timelineItem {
-  padding: 32px;
+  padding: 16px;
   margin-bottom: 32px;
   border-radius: 4px;
   width: 90vw;
-  max-width: 512px;
+  max-width: 576px;
   background: $color-background-card;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
@@ -40,16 +40,16 @@
 
 @media (min-width: 1200px) {
   .timeline {
-    max-width: 1100px;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     flex-direction: row-reverse;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0 8px;
     li {
-      margin: 0 8px;
+      margin: 0 8px 0 0;
       &:nth-child(even) {
         margin-top: 200px;
       }
