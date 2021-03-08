@@ -71,7 +71,7 @@ export default function Header(props: Props) {
             </Link>
           </li>
           <li>
-            <Link className={styles.navItem + " " + styles[getActiveClass(3)]} to="/">
+            <Link className={styles.navItem + " " + styles[getActiveClass(3)]} to="/about">
               Om oss
             </Link>
           </li>

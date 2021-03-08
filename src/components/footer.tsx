@@ -29,7 +29,7 @@ export default function Footer() {
               <Link to="/">Hem</Link>
               <Link to="/">Tidslinje</Link>
               <Link to="/contact">Samarbete</Link>
-              <Link to="/">Om oss</Link>
+              <Link to="/about">Om oss</Link>
             </div>
             <div className={styles.links}>
               <h3>Socialt</h3>

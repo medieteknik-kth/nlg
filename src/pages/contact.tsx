@@ -12,8 +12,8 @@ function Contact() {
           <p>Kontakta oss för att samarbeta med Sektionen för Medieteknik på KTH! Vi erbjuder annonsering, event, föreläsningstillfällen eller andra saker ni vill hitta på med våra studenter.</p>
           <div className={styles.card}>
             <h2>Näringslivsansvarig</h2>
-            <p>Amalia Berglöf</p>
             <img src={amalia} className={styles.profileImage}/>
+            <p>Amalia Berglöf</p>
             <a href="mailto: naringsliv@medieteknik.com">naringsliv@medieteknik.com</a>
           </div>
         </div>
