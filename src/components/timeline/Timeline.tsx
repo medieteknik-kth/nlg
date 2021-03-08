@@ -1,7 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import TimelineItem from "./TimelineItem"
-import { FluidObject } from "gatsby-image"
 import styles from "./timeline.module.scss"
 
 interface EdgeInterface {
