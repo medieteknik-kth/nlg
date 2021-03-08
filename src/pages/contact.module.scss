@@ -16,7 +16,14 @@
     text-align: center;
   }
   h2 {
+    margin-top: 0;
     text-align: center;
+  }
+  a {
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 .card {
@@ -28,6 +35,13 @@
 }
 .profileImage {
   display: block;
-  height: 56px;
+  height: 80px;
   margin: 0 auto;
+  margin-top: 32px;
+  clip-path: circle();
+}
+@media (min-width: 800px) {
+  .card {
+    padding: 64px;
+  }
 }
