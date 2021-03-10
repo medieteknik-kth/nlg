@@ -9,7 +9,7 @@
 }
 .sideimg {
   display: none;
-  max-width: 600px;
+  max-width: 38vw;
 }
 .background {
   z-index: -1;
@@ -82,7 +82,7 @@
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
   .sideimg {
     display: initial;
   }
