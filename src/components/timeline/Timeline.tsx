@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import TimelineItem from "./TimelineItem"
 import styles from "./timeline.module.scss"
+import Masonry from "react-masonry-css"
 
 interface EdgeInterface {
   node: {
@@ -49,29 +50,29 @@ const Timeline: React.FC = () => {
   `)
 
   return (
-    <ol className={styles.timeline}>
-      {data ? (
-        data?.allContentfulTimelinePost?.edges.map((edge, index) => {
-          return (
-            <li
-              key={index}
-              style={{ gridRowStart: index + 1, gridRowEnd: index + 3 }}
-            >
-              <TimelineItem
-                title={edge?.node?.title}
-                date={edge?.node?.publishedDate}
-                url={edge?.node?.image?.fluid?.src}
-                alt={edge?.node?.image?.title}
-                description={edge?.node?.description?.description}
-              />
-            </li>
-          )
-        })
-      ) : (
-        <p>No items to show</p>
-      )}
-    </ol>
-  )
-}
+    <>
+    {data ? 
+      <Masonry
+        breakpointCols={2}
+        className={styles.timeline}
+        columnClassName={styles.timelineCol}>
+          {data?.allContentfulTimelinePost?.edges.map((edge, index) => {
+            return (
+                <TimelineItem
+                  key={index}
+                  title={edge?.node?.title}
+                  date={edge?.node?.publishedDate}
+                  url={edge?.node?.image?.fluid?.src}
+                  alt={edge?.node?.image?.title}
+                  description={edge?.node?.description?.description}
+                />
+            )})
+          }
+      </Masonry>
+      :
+      <p>Nothing to show!</p>
+      }
+      </>
+  )}
 
 export default Timeline

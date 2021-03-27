@@ -1,15 +1,20 @@
 @import "../../styles/variables";
 
 .timeline {
-  margin-top: -32px;
   display: flex;
-  flex-direction: column;
-  flex-basis: auto;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  width: 100%;
-  padding: 0;
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timelineCol {
+  padding-left: 32px;
+  background-clip: padding-box;
+  &:first-of-type {
+    margin-top: 32px;
+  }
+  &:last-of-type {
+    margin-top: -64px;
+  }
 }
 
 .image {
@@ -18,11 +23,9 @@
 }
 
 .timelineItem {
-  padding: 16px;
   margin-bottom: 32px;
+  padding: 16px;
   border-radius: 4px;
-  width: 90vw;
-  max-width: 576px;
   background: $color-background-card;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
@@ -36,26 +39,4 @@
 
 .styledLink {
   color: $color-text-primary;
-}
-
-@media (min-width: 1200px) {
-  .timeline {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding: 0 8px;
-    li {
-      margin: 0 8px 0 0;
-      &:nth-child(even) {
-        margin-top: 200px;
-      }
-      &:nth-child(odd):not(:first-child) {
-        margin-top: -140px;
-      }
-    }
-  }
 }
