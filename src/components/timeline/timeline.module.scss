@@ -29,12 +29,6 @@
   background: $color-background-card;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
-  &:hover h2 {
-    text-decoration: underline;
-  }
-  &:hover .image {
-    opacity: 0.6;
-  }
 }
 
 .styledLink {
