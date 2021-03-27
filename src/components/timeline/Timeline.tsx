@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import TimelineItem from "./TimelineItem"
 import styles from "./timeline.module.scss"
@@ -49,11 +49,30 @@ const Timeline: React.FC = () => {
     }
   `)
 
+  const [colNum, setColNum] = useState(1)
+
+  useEffect(() => {
+    updateTimelineCols()
+    window.addEventListener('resize', updateTimelineCols)
+    return () => {
+      window.addEventListener('resize', updateTimelineCols)
+    }
+  }, [])
+
+  function updateTimelineCols() {
+    let width = window.innerWidth
+    if (width > 800) {
+      setColNum(2)
+    } else {
+      setColNum(1)
+    }
+  }
+
   return (
     <>
     {data ? 
       <Masonry
-        breakpointCols={2}
+        breakpointCols={colNum}
         className={styles.timeline}
         columnClassName={styles.timelineCol}>
           {data?.allContentfulTimelinePost?.edges.map((edge, index) => {

@@ -8,6 +8,7 @@
   justify-content: center;
 }
 .containerCenter {
+  width: 100%;
   padding: 16px;
   margin: 120px 0;
   display: flex;
@@ -17,7 +18,10 @@
   justify-content: space-evenly;
   div {
     margin: 16px;
-    max-width: 512px;
+    max-width: 600px;
+    &:first-of-type {
+      margin-top: 80px;
+    }
   }
   p {
     margin-top: 16px;

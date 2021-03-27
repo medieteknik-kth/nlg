@@ -10,9 +10,11 @@
   padding-left: 32px;
   background-clip: padding-box;
   &:first-of-type {
+    padding-right: 0;
     margin-top: 32px;
   }
   &:last-of-type {
+    padding-right: 32px;
     margin-top: -64px;
   }
 }
@@ -33,4 +35,13 @@
 
 .styledLink {
   color: $color-text-primary;
+}
+
+@media (max-width: 800px) {
+  .timeline {
+    display: block;
+  }
+  .timelineCol {
+    padding-right: 32px;
+  }
 }
