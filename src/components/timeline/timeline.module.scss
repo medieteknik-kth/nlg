@@ -34,7 +34,12 @@
 }
 
 .styledLink {
+  font-weight: 600;
   color: $color-text-primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: 800px) {

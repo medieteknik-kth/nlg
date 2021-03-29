@@ -8,14 +8,12 @@ interface EdgeInterface {
   node: {
     title: string
     publishedDate: string | undefined
+    body: any
     image: {
       title: string
       fluid: {
         src: string
       }
-    }
-    description: {
-      description: string | undefined
     }
   }
 }
@@ -40,8 +38,8 @@ const Timeline: React.FC = () => {
                 src
               }
             }
-            description {
-              description
+            body {
+              raw
             }
           }
         }
@@ -53,9 +51,9 @@ const Timeline: React.FC = () => {
 
   useEffect(() => {
     updateTimelineCols()
-    window.addEventListener('resize', updateTimelineCols)
+    window.addEventListener("resize", updateTimelineCols)
     return () => {
-      window.addEventListener('resize', updateTimelineCols)
+      window.addEventListener("resize", updateTimelineCols)
     }
   }, [])
 
@@ -70,28 +68,30 @@ const Timeline: React.FC = () => {
 
   return (
     <>
-    {data ? 
-      <Masonry
-        breakpointCols={colNum}
-        className={styles.timeline}
-        columnClassName={styles.timelineCol}>
+      {data ? (
+        <Masonry
+          breakpointCols={colNum}
+          className={styles.timeline}
+          columnClassName={styles.timelineCol}
+        >
           {data?.allContentfulTimelinePost?.edges.map((edge, index) => {
             return (
-                <TimelineItem
-                  key={index}
-                  title={edge?.node?.title}
-                  date={edge?.node?.publishedDate}
-                  url={edge?.node?.image?.fluid?.src}
-                  alt={edge?.node?.image?.title}
-                  description={edge?.node?.description?.description}
-                />
-            )})
-          }
-      </Masonry>
-      :
-      <p>Nothing to show!</p>
-      }
-      </>
-  )}
+              <TimelineItem
+                key={index}
+                title={edge?.node?.title}
+                date={edge?.node?.publishedDate}
+                url={edge?.node?.image?.fluid?.src}
+                alt={edge?.node?.image?.title}
+                body={edge?.node?.body?.raw}
+              />
+            )
+          })}
+        </Masonry>
+      ) : (
+        <p>Nothing to show!</p>
+      )}
+    </>
+  )
+}
 
 export default Timeline
