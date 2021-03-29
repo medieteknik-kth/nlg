@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+
+.timeline {
+  display: flex;
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timelineCol {
+  padding-left: 32px;
+  background-clip: padding-box;
+  &:first-of-type {
+    padding-right: 0;
+    margin-top: 32px;
+  }
+  &:last-of-type {
+    padding-right: 32px;
+    margin-top: -64px;
+  }
+}
+
+.image {
+  transition: all 0.1s ease;
+  width: 100%;
+}
+
+.timelineItem {
+  margin-bottom: 32px;
+  padding: 16px;
+  border-radius: 4px;
+  background: $color-background-card;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+}
+
+.styledLink {
+  font-weight: 600;
+  color: $color-text-primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 800px) {
+  .timeline {
+    display: block;
+  }
+  .timelineCol {
+    padding-right: 32px;
+  }
+}
