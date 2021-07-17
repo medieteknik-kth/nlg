@@ -19,7 +19,8 @@ export default function Index() {
   }, [pageNumber])
 
   function cleanURL() {
-    const hashtag = window.location.hash
+    if (typeof location === `undefined`) return
+    const hashtag = location.hash
     if (hashtag) {
       const currentURL = window.location.href
       const newURL = currentURL.split("#")[0]
