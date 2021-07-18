@@ -35,7 +35,7 @@ export default function Header(props: Props) {
       <nav>
         <ul>
           <li>
-            {window.location.pathname !== "/" && window.location.pathname !== "/#home" && window.location.pathname !== "/#timeline" ?
+            {typeof location !== `undefined` && location.pathname !== "/" && location.pathname !== "/#home" && location.pathname !== "/#timeline" ?
               <Link
                 className={styles.navItem + " " + styles[getActiveClass(0)]}
                 to="/"
@@ -49,7 +49,7 @@ export default function Header(props: Props) {
             }
           </li>
           <li>
-            {window.location.pathname !== "/" && window.location.pathname !== "/#home" && window.location.pathname !== "/#timeline" ?
+            {typeof location !== `undefined` && location.pathname !== "/" && location.pathname !== "/#home" && location.pathname !== "/#timeline" ?
               <Link
                 className={styles.navItem + " " + styles[getActiveClass(1)]}
                 to="/#timeline"
