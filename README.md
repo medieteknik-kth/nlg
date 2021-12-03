@@ -27,8 +27,12 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
     npm install
     ```
     
-     Skapa sedan en environment-fil i rot-mappen (.env)
-
+     Skapa sedan en environment-fil i rot-mappen (.env) med två variabler:
+     ```
+     CONTENTFUL_SPACE_ID=ditt_space_id_från_contentful
+     CONTENTFUL_ACCESS_TOKEN=din_access_token_från_contentful
+     ```
+     (fyll i ditt_space_id_från_contentful och din_access_token_från_contentful med dina egna värden)
 3.  **Starta sidan**
 
     Starta upp sidan på `http://localhost:8000`
