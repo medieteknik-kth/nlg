@@ -2,16 +2,16 @@ import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
 import styles from "./header.module.scss"
 import logo from "src/images/nlg-icon.png"
+import MyButton from "src/components/button"
 
 interface Props {
   // Page number, first page is 0
   page: number
 }
 export default function Header(props: Props) {
-
   const [backgroundClass, setBackgroundClass] = useState("")
   useEffect(() => {
-    document.addEventListener("scroll", adjustBackground);
+    document.addEventListener("scroll", adjustBackground)
     return () => {
       document.removeEventListener("scroll", adjustBackground)
     }
@@ -19,7 +19,10 @@ export default function Header(props: Props) {
 
   function adjustBackground() {
     let scrolled = document.scrollingElement?.scrollTop
-    if (scrolled != null) scrolled > 0 ? setBackgroundClass(styles.background) : setBackgroundClass("")
+    if (scrolled != null)
+      scrolled > 0
+        ? setBackgroundClass(styles.background)
+        : setBackgroundClass("")
   }
   // Adds active styles if page number matches
   function getActiveClass(page: number): string {
@@ -28,6 +31,7 @@ export default function Header(props: Props) {
 
   return (
     <header className={styles.container + " " + backgroundClass}>
+      <MyButton></MyButton>
       <Link className={styles.titleContainer} to="/">
         <img className={styles.logo} src={logo} />
         <h1 className={styles.title}>Näringslivsgruppen</h1>
@@ -35,32 +39,52 @@ export default function Header(props: Props) {
       <nav>
         <ul>
           <li>
-            {typeof location !== `undefined` && location.pathname !== "/" && location.pathname !== "/#home" && location.pathname !== "/#timeline" ?
+            {typeof location !== `undefined` &&
+            location.pathname !== "/" &&
+            location.pathname !== "/#home" &&
+            location.pathname !== "/#timeline" ? (
               <Link
                 className={styles.navItem + " " + styles[getActiveClass(0)]}
                 to="/"
               >
                 Hem
               </Link>
-            :  
-              <a onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(0)]}>
+            ) : (
+              <a
+                onClick={() =>
+                  document
+                    .getElementById("home")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" })
+                }
+                className={styles.navItem + " " + styles[getActiveClass(0)]}
+              >
                 Hem
               </a>
-            }
+            )}
           </li>
           <li>
-            {typeof location !== `undefined` && location.pathname !== "/" && location.pathname !== "/#home" && location.pathname !== "/#timeline" ?
+            {typeof location !== `undefined` &&
+            location.pathname !== "/" &&
+            location.pathname !== "/#home" &&
+            location.pathname !== "/#timeline" ? (
               <Link
                 className={styles.navItem + " " + styles[getActiveClass(1)]}
                 to="/#timeline"
               >
                 Tidslinje
               </Link>
-            :
-              <a onClick={() => document.getElementById("timeline")?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className={styles.navItem + " " + styles[getActiveClass(1)]} >
+            ) : (
+              <a
+                onClick={() =>
+                  document
+                    .getElementById("timeline")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" })
+                }
+                className={styles.navItem + " " + styles[getActiveClass(1)]}
+              >
                 Tidslinje
               </a>
-            }
+            )}
           </li>
           <li>
             <Link
@@ -71,7 +95,10 @@ export default function Header(props: Props) {
             </Link>
           </li>
           <li>
-            <Link className={styles.navItem + " " + styles[getActiveClass(3)]} to="/about">
+            <Link
+              className={styles.navItem + " " + styles[getActiveClass(3)]}
+              to="/about"
+            >
               Om oss
             </Link>
           </li>
