@@ -27,7 +27,7 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
     npm install
     ```
     
-     Skapa sedan en environment-fil i rot-mappen (.env) med två variabler:
+     Skapa sedan en environment-fil i rot-mappen (.env) med två konstanter:
      ```
      CONTENTFUL_SPACE_ID=ditt_space_id_från_contentful
      CONTENTFUL_ACCESS_TOKEN=din_access_token_från_contentful
