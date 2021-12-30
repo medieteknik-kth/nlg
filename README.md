@@ -39,12 +39,12 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
     ```shell
     GATSBY_GRAPHQL_IDE=playground
     CONTENTFUL_SPACE_ID=X
-    CONTENTFUL_ACCESS_TOKEN=X
+    CONTENTFUL_ACCESS_TOKEN=Y
     ```
 
-    Fyll i X med värden från Contentful!
+    Fyll i X och Y med värden från Contentful!
     
-    Mer information [här](https://www.contentful.com/help/find-space-id/) och [här](https://www.contentful.com/developers/docs/references/authentication/#the-content-management-api).
+    Mer information finns [här](https://www.contentful.com/help/find-space-id/) och [här](https://www.contentful.com/developers/docs/references/authentication/#the-content-management-api).
 
 3.  **Starta sidan**
 
