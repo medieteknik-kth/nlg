@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import { Link } from "gatsby"
 import { FaFacebook, FaInstagram } from "react-icons/fa"
 import Layout from "src/components/layout"

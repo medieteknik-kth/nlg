@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import noella from "../images/noella.jpg"
-import styles from "./contact.module.scss"
+import * as styles from "./contact.module.scss"
 
 function Contact() {
   return (
