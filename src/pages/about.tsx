@@ -12,9 +12,9 @@ export default function About() {
             <p><span>Vi är NLG, Medietekniksektionens näringslivsgrupp på KTH. </span>
               Medieteknik är en kreativ civilingenjörsutbildning som skolar nästa generations utvecklare, UX designers projektledare och spelutvecklare. 
               Vi blandar traditionella ingenjörsämnen med programmering, interaktionsdesign,  datorgrafik, visualisering, och maskininlärning bland annat. 
-              </p><p>Sektionens näringslivsgrupp fungerar som studenternas förlängda arm ut iarbetslivet. 
+              </p><p>Sektionens näringslivsgrupp fungerar som studenternas förlängda arm ut i arbetslivet. 
               Vi ordnar företagsevent, lunchföreläsningar, företagspubar samt erbjuder annonsering på våra plattformar. 
-              Ett samarbete med oss ärett kul sätt att exponera ert företag inför framtidens tech-talanger. 
+              Ett samarbete med oss är ett kul sätt att exponera ert företag inför framtidens tech-talanger. 
               </p><p>Låter det intressant? Hör av er så planerar vi något ihop!</p>
           </div>
           <div className={styles.card}>
@@ -26,7 +26,7 @@ export default function About() {
             <p><span>Digitala event</span></p>
             <p>Möt medieteknikstudenter online! Vi hjälper er gärna att spåna fram ideér på kul event. Kanske är ni sugna på ett hackaton, en digitala föreläsning, en quizkväll, spelkväll eller något helt annat.</p>
             <p><span>Monter i meta</span></p>
-            <p>I vår sektionslokal META rör sig hundratals studenter från medietekniksektionen och datasektionen varje dag. Vill ni hänga med oss?Då är en monter i META perfekt för er.</p>
+            <p>I vår sektionslokal META rör sig hundratals studenter från medietekniksektionen och datasektionen varje dag. Vill ni hänga med oss? Då är en monter i META perfekt för er.</p>
             <p><span>Annonsera</span></p>
             <p>Vill ni annonsera om Ex-jobb, sommarjobb, traineeplatser, events eller något annat som skulle intressera en medieteknikstudent? Genom vår facebook och instagram når ni hela sektionen.</p>
           </div>
