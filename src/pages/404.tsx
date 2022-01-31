@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import styles from "./404.module.scss"
+import * as styles from "./404.module.scss"
 
 export default function NotFound() {
     return (

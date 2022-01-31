@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import styles from "./about.module.scss"
+import * as styles from "./about.module.scss"
 
 export default function About() {
   return (
