@@ -11,7 +11,7 @@ import jackie from "../images/jackie.jpg"
 import vivi from "../images/vivi.jpg"
 import luca from "../images/luca.jpg"
 import julia from "../images/julia.jpg"
-import styles from "./contact.module.scss"
+import * as styles from "./contact.module.scss"
 
 function Contact() {
   return (
@@ -36,9 +36,7 @@ function Contact() {
             <h2>Företagsansvarig</h2>
             <img src={elias} className={styles.profileImage} />
             <p>Elias Hedlin</p>
-            <a href="mailto: Elias@libredo.se">
-              Elias@libredo.se
-            </a>
+            <a href="mailto: Elias@libredo.se">Elias@libredo.se</a>
           </div>
           <div className={styles.card}>
             <h2>Företagsansvarig</h2>
@@ -52,25 +50,19 @@ function Contact() {
             <h2>Företagsansvarig</h2>
             <img src={isabella} className={styles.profileImage} />
             <p>Isabella Gobl</p>
-            <a href="mailto: igobl@kth.se">
-              igobl@kth.se
-            </a>
+            <a href="mailto: igobl@kth.se">igobl@kth.se</a>
           </div>
           <div className={styles.card}>
             <h2>Företagsansvarig</h2>
             <img src={nora} className={styles.profileImage} />
             <p>Nora Dunder</p>
-            <a href="mailto: ndunder@kth.se">
-              ndunder@kth.se
-            </a>
+            <a href="mailto: ndunder@kth.se">ndunder@kth.se</a>
           </div>
           <div className={styles.card}>
             <h2>Eventansvarig</h2>
             <img src={oscar} className={styles.profileImage} />
             <p>Oscar Wester</p>
-            <a href="mailto: Oscar.wester@me.com">
-              Oscar.wester@me.com
-            </a>
+            <a href="mailto: Oscar.wester@me.com">Oscar.wester@me.com</a>
           </div>
           <div className={styles.card}>
             <h2>Eventansvarig</h2>
@@ -84,9 +76,7 @@ function Contact() {
             <h2>PR/Art director</h2>
             <img src={jackie} className={styles.profileImage} />
             <p>Jackie Hellsten</p>
-            <a href="mailto: jackieh@kth.se">
-              jackieh@kth.se
-            </a>
+            <a href="mailto: jackieh@kth.se">jackieh@kth.se</a>
           </div>
           <div className={styles.card}>
             <h2>PR/Art director</h2>
@@ -100,9 +90,7 @@ function Contact() {
             <h2>Webbansvarig</h2>
             <img src={luca} className={styles.profileImage} />
             <p>Luca Lancella</p>
-            <a href="mailto: lucalan97@icloud.com">
-              lucalan97@icloud.com
-            </a>
+            <a href="mailto: lucalan97@icloud.com">lucalan97@icloud.com</a>
           </div>
           <div className={styles.card}>
             <h2>Webbansvarig</h2>
@@ -112,7 +100,6 @@ function Contact() {
               Juliahallberg98@outlook.com
             </a>
           </div>
-
         </div>
       </div>
     </Layout>

@@ -24,21 +24,34 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
 
     ```shell
     cd nlg
-    npm install
+    yarn install
     ```
+    Om du inte har yarn, installera yarn med
+    ```shell
+    npm install -g yarn
+    ```
+
+     Skapa sedan två environment-filer i root-mappen:
+     `.env.development` och `.env.production`
+
+     båda måste innehålla tre värden:
     
-     Skapa sedan en environment-fil i rot-mappen (.env) med två konstanter:
-     ```
-     CONTENTFUL_SPACE_ID=ditt_space_id_från_contentful
-     CONTENTFUL_ACCESS_TOKEN=din_access_token_från_contentful
-     ```
-     (fyll i ditt_space_id_från_contentful och din_access_token_från_contentful med dina egna värden)
+    ```shell
+    GATSBY_GRAPHQL_IDE=playground
+    CONTENTFUL_SPACE_ID=X
+    CONTENTFUL_ACCESS_TOKEN=Y
+    ```
+
+    Fyll i X och Y med värden från Contentful!
+    
+    Mer information finns [här](https://www.contentful.com/help/find-space-id/) och [här](https://www.contentful.com/developers/docs/references/authentication/#the-content-management-api).
+
 3.  **Starta sidan**
 
     Starta upp sidan på `http://localhost:8000`
 
     ```shell
-    npm start
+    yarn start
     ```
     
 ## 🧐 Teknologier

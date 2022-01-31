@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
-import styles from "./header.module.scss"
+import * as styles from "./header.module.scss"
 import logo from "src/images/nlg-icon.png"
 
 interface Props {

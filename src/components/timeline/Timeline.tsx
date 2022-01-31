@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import TimelineItem from "./TimelineItem"
-import styles from "./timeline.module.scss"
+import * as styles from "./timeline.module.scss"
 import Masonry from "react-masonry-css"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 
 interface EdgeInterface {
   node: {
@@ -11,9 +12,7 @@ interface EdgeInterface {
     body: any
     image: {
       title: string
-      fluid: {
-        src: string
-      }
+      gatsbyImageData: IGatsbyImageData
     }
   }
 }
@@ -34,9 +33,7 @@ const Timeline: React.FC = () => {
             publishedDate(formatString: "MMMM Do, YYYY")
             image {
               title
-              fluid(resizingBehavior: FILL) {
-                src
-              }
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
             body {
               raw
@@ -80,7 +77,7 @@ const Timeline: React.FC = () => {
                 key={index}
                 title={edge?.node?.title}
                 date={edge?.node?.publishedDate}
-                url={edge?.node?.image?.fluid?.src}
+                url={edge?.node?.image?.gatsbyImageData}
                 alt={edge?.node?.image?.title}
                 body={edge?.node?.body?.raw}
               />
