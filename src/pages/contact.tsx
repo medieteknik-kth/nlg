@@ -32,72 +32,72 @@ function Contact() {
               naringsliv@medieteknik.com
             </a>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card2}>
             <h2>Företagsansvarig</h2>
             <img src={elias} className={styles.profileImage} />
             <p>Elias Hedlin</p>
-            <a href="mailto: Elias@libredo.se">Elias@libredo.se</a>
+            <a href="mailto: ehedlin@kth.se">ehedlin@kth.se</a>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card2}>
             <h2>Företagsansvarig</h2>
             <img src={emil} className={styles.profileImage} />
             <p>Emil Lidbom</p>
-            <a href="mailto: Emilnils.lidbom@gmail.com">
-              Emilnils.lidbom@gmail.com
+            <a href="mailto: elidbom@kth.se">
+              elidbom@kth.se
             </a>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card2}>
             <h2>Företagsansvarig</h2>
             <img src={isabella} className={styles.profileImage} />
             <p>Isabella Gobl</p>
             <a href="mailto: igobl@kth.se">igobl@kth.se</a>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card2}>
             <h2>Företagsansvarig</h2>
             <img src={nora} className={styles.profileImage} />
             <p>Nora Dunder</p>
             <a href="mailto: ndunder@kth.se">ndunder@kth.se</a>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card3}>
             <h2>Eventansvarig</h2>
             <img src={oscar} className={styles.profileImage} />
             <p>Oscar Wester</p>
             <a href="mailto: Oscar.wester@me.com">Oscar.wester@me.com</a>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card3}>
             <h2>Eventansvarig</h2>
             <img src={emil2} className={styles.profileImage} />
             <p>Emil Cromnier</p>
-            <a href="mailto: emil.cromnier@gmail.com">
-              emil.cromnier@gmail.com
+            <a href="mailto: emilcr@kth.se">
+            emilcr@kth.se
             </a>
           </div>
-          <div className={styles.card}>
-            <h2>PR/Art director</h2>
+          <div className={styles.card4}>
+            <h2>PR/Art</h2>
             <img src={jackie} className={styles.profileImage} />
             <p>Jackie Hellsten</p>
             <a href="mailto: jackieh@kth.se">jackieh@kth.se</a>
           </div>
-          <div className={styles.card}>
-            <h2>PR/Art director</h2>
+          <div className={styles.card4}>
+            <h2>PR/Art</h2>
             <img src={vivi} className={styles.profileImage} />
             <p>Vivi Andersson</p>
-            <a href="mailto: Viviandersson0@gmail.com">
-              Viviandersson0@gmail.com
+            <a href="mailto: vivia@kth.se">
+              vivia@kth.se
             </a>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card5}>
             <h2>Webbansvarig</h2>
             <img src={luca} className={styles.profileImage} />
             <p>Luca Lancella</p>
-            <a href="mailto: lucalan97@icloud.com">lucalan97@icloud.com</a>
+            <a href="mailto: lucalan97@icloud.com">lucalan@kth.se</a>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card5}>
             <h2>Webbansvarig</h2>
             <img src={julia} className={styles.profileImage} />
             <p>Julia Hallberg</p>
-            <a href="mailto: Juliahallberg98@outlook.com">
-              Juliahallberg98@outlook.com
+            <a href="mailto: juh@kth.se">
+            juh@kth.se
             </a>
           </div>
         </div>
