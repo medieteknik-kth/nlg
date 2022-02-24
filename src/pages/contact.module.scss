@@ -14,10 +14,14 @@
   p {
     margin-top: 16px;
     text-align: center;
+    max-width: 512px;
+    margin-left:auto;
+    margin-right:auto;
   }
   h2 {
     margin-top: 0;
     text-align: center;
+    
   }
   a {
     font-weight: 600;
@@ -33,6 +37,50 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
 }
+
+.card2 {
+
+  margin: 32px 0;
+  padding: 32px;
+  background: $color-background-card;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 4px;
+}
+
+.card3 {
+
+  margin: 32px 0;
+  padding: 32px;
+  background: $color-background-card;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 4px;
+
+
+}
+
+.card4 {
+
+  margin: 32px 0;
+  padding: 32px;
+  background: $color-background-card;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 4px;
+
+
+}
+
+.card5 {
+
+  margin: 32px 0;
+  padding: 32px;
+  background: $color-background-card;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 4px;
+
+
+}
+
+
 .profileImage {
   display: block;
   height: 80px;
@@ -40,8 +88,72 @@
   margin-top: 32px;
   clip-path: circle();
 }
-@media (min-width: 800px) {
-  .card {
-    padding: 64px;
+
+
+
+@media (min-width: 1080px) {
+  .containerCenter {
+    max-width:100%;
+    h2 {
+      font-size: 18px;
+    }
+    a {
+      font-size: 15px;
+      }
   }
-}
+  .card {
+    width: 350px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 5px;
+    padding:20px;
+  }
+  .card2 {
+    float: left;
+    width: 24%;
+    margin: 5px 0;
+    padding:20px;
+    margin-right: 1%;
+    background: $color-background-card;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+    }
+  .card3 {
+    float: left;
+    width: 15.66666667%;
+    margin: 5px 0;
+    padding: 20px;
+    margin-right:1%;
+    background: $color-background-card;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+  }
+  
+  .card4 {
+    float: left;
+    width: 15.66666667%;
+    margin: 5px 0;
+    padding: 20px;
+    margin-right:1%;
+    background: $color-background-card;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+  }
+  
+  .card5 {
+    float: left;
+    width: 15.66666667%;
+    margin: 5px 0;
+    padding: 20px;
+    margin-right:1%;
+    background: $color-background-card;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+  }
+  
+  
+  }
+
+
+
+
