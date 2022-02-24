@@ -62,7 +62,7 @@ function Contact() {
             <h2>Eventansvarig</h2>
             <img src={oscar} className={styles.profileImage} />
             <p>Oscar Wester</p>
-            <a href="mailto: Oscar.wester@me.com">Oscar.wester@me.com</a>
+            <a href="mailto: oswe@kth.se">oswe@kth.se</a>
           </div>
           <div className={styles.card3}>
             <h2>Eventansvarig</h2>
