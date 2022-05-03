@@ -34,7 +34,7 @@ export default function Footer() {
             <div className={styles.links}>
               <h3>Socialt</h3>
               <a href="https://www.facebook.com/NLGmedieteknik">Facebook</a>
-              <a href="http://www.instagram.com/nlg_medieteknik">Instagram</a>
+              <a href="https://www.instagram.com/naringsliv_medieteknik/">Instagram</a>
             </div>
           </div>
           <p className={styles.copyright}>

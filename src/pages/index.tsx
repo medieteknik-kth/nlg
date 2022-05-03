@@ -58,7 +58,7 @@ export default function Index() {
           <a id="timeline" href="https://www.facebook.com/NLGmedieteknik">
             <FaFacebook className={styles.icon} />
           </a>
-          <a href="http://www.instagram.com/nlg_medieteknik">
+          <a href="https://www.instagram.com/naringsliv_medieteknik/">
             <FaInstagram className={styles.icon} />
           </a>
         </div>

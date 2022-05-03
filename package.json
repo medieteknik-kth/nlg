@@ -26,6 +26,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
     "react-masonry-css": "^1.0.14",
+    "react-slideshow-image": "^3.7.0",
     "sass": "^1.45.1",
     "sass-loader": "^12.4.0"
   },
