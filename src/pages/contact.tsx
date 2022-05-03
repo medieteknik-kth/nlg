@@ -90,7 +90,9 @@ function Contact() {
             <h2>Webbansvarig</h2>
             <img src={luca} className={styles.profileImage} />
             <p>Luca Lancella</p>
-            <a href="mailto: lucalan97@icloud.com">lucalan@kth.se</a>
+            <a href="mailto: lucalan@kth.se">
+              lucalan@kth.se
+            </a>
           </div>
           <div className={styles.card5}>
             <h2>Webbansvarig</h2>

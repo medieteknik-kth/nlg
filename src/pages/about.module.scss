@@ -25,7 +25,7 @@
   }
   h2 {
     margin-top: 0;
-    text-align: left;
+    text-align: center;
   }
   a {
     font-weight: 600;
@@ -40,6 +40,21 @@
   background: $color-background-card;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
+
+    p {
+    margin-top: 16px;
+    text-align: center;
+    margin-left:10%;
+    margin-right:10%;
+    span {
+      font-weight: 900;
+    }
+}
+
+    h2 {
+      margin-top: 0;
+      text-align: center;
+    }
 }
 @media (min-width: 800px) {
   .card {
@@ -52,4 +67,13 @@
   margin: 0 auto;
   margin-top: 32px;
   width: 100%;
+}
+
+
+.eventImage {
+  display: flex;
+  margin-top: 80px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
 }
