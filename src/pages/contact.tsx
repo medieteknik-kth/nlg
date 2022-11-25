@@ -9,6 +9,7 @@ import oscar from "../images/oscar.jpg"
 import emil2 from "../images/emil2.jpg"
 import jackie from "../images/jackie.jpg"
 import vivi from "../images/vivi.jpg"
+import joakim from "../images/profilbilder/joakim.jpg"
 import luca from "../images/luca.jpg"
 import julia from "../images/julia.jpg"
 import * as styles from "./contact.module.scss"
@@ -78,7 +79,7 @@ function Contact() {
             <p>Jackie Hellsten</p>
             <a href="mailto: jackieh@kth.se">jackieh@kth.se</a>
           </div>
-          <div className={styles.card4}>
+          <div className={styles.card2}>
             <h2>PR/Art</h2>
             <img src={vivi} className={styles.profileImage} />
             <p>Vivi Andersson</p>
@@ -86,20 +87,12 @@ function Contact() {
               vivia@kth.se
             </a>
           </div>
-          <div className={styles.card5}>
+          <div className={styles.card2}>
             <h2>Webbansvarig</h2>
-            <img src={luca} className={styles.profileImage} />
-            <p>Luca Lancella</p>
-            <a href="mailto: lucalan@kth.se">
-              lucalan@kth.se
-            </a>
-          </div>
-          <div className={styles.card5}>
-            <h2>Webbansvarig</h2>
-            <img src={julia} className={styles.profileImage} />
-            <p>Julia Hallberg</p>
-            <a href="mailto: juh@kth.se">
-            juh@kth.se
+            <img src={joakim} className={styles.profileImage} />
+            <p>Joakim Strand</p>
+            <a href="mailto: joakstr@kth.se">
+              joakstr@kth.se
             </a>
           </div>
         </div>
