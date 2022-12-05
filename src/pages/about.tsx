@@ -9,6 +9,9 @@ import pub from "../images/pub.jpg"
 import * as styles from "./about.module.scss"
 import Pdf from '../images/Prospekt.pdf'
 
+//Länk till pdf:
+//<a href = {Pdf} target = "_blank">Här</a> -->
+
 export default function About() {
   return (
       <Layout page={3} title="Om oss">
@@ -18,14 +21,14 @@ export default function About() {
               <h1>Om oss</h1>
               <img src={hemsida2} className={styles.groupImage} />
               <p><span>Vi är NLG, <a href="https://www.medieteknik.com/">Medietekniksektionens</a> näringslivsgrupp på KTH. </span>
-              Medieteknik är en kreativ civilingenjörsutbildning som skolar nästa generations utvecklare, UX designers projektledare och spelutvecklare.
-                Vi blandar traditionella ingenjörsämnen med programmering, interaktionsdesign,  datorgrafik, visualisering, och maskininlärning bland annat. <a href="https://www.kth.se/utbildning/civilingenjor/medieteknik/medieteknik-civilingenjor-300-hp-1.4150">Här</a> hittar ni mer information om programmet.
+              Medieteknik är en kreativ civilingenjörsutbildning som skolar nästa generations utvecklare, UX-designers, projektledare och spelutvecklare.
+                Vi blandar traditionella ingenjörsämnen med programmering, interaktionsdesign, datorgrafik, visualisering, och maskininlärning bland annat. <a href="https://www.kth.se/utbildning/civilingenjor/medieteknik/medieteknik-civilingenjor-300-hp-1.4150">Här</a> hittar ni mer information om programmet.
               </p><p>Sektionens näringslivsgrupp fungerar som studenternas förlängda arm ut i arbetslivet.
                 Vi ordnar företagsevent, lunchföreläsningar, företagspubar samt erbjuder annonsering på våra plattformar.
                 Ett samarbete med oss är ett kul sätt att exponera ert företag inför framtidens tech-talanger.
-              </p><p>Låter det intressant? Hör av er så planerar vi något ihop! <a href = {Pdf} target = "_blank">Här</a> hittar ni mer information om priser.</p>
+              </p><p>Låter det intressant? Hör av er så planerar vi något ihop! För information om priser med mera, kontakta oss!</p>
             </div>
-
+             
             <div className={styles.card}>
               <h2>Olika typer av event</h2>            
               <img src={event} className={styles.eventImage} /> 
