@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import * as styles from "./index.module.scss"
 import { Link } from "gatsby"
-import { FaFacebook, FaInstagram } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 import Layout from "src/components/layout"
 import Timeline from "src/components/timeline/Timeline"
 import background from "src/images/gray_waves.svg"
@@ -60,6 +60,9 @@ export default function Index() {
           </a>
           <a href="https://www.instagram.com/naringsliv_medieteknik/">
             <FaInstagram className={styles.icon} />
+          </a>
+          <a href="https://www.linkedin.com/company/nlgmedieteknik">
+            <FaLinkedin className={styles.icon} />
           </a>
         </div>
       </div>
