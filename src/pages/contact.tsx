@@ -10,7 +10,7 @@ import kajsa from "../images/profilbilder/hs/kajsa.jpg"
 import marcus from "../images/profilbilder/hs/marcus.jpg"
 import negar from "../images/profilbilder/hs/negar.jpg"
 import patrik from "../images/profilbilder/hs/patrik.jpg"
-//import molly from "../images/profilbilder/molly.jpg"
+import molly from "../images/profilbilder/molly.jpg"
 import * as styles from "./contact.module.scss"
 
 function Contact() {
@@ -80,7 +80,7 @@ function Contact() {
           </div>
           <div className={styles.card3}>
             <h2>PR</h2>
-            <img src={placeholder} className={styles.profileImage} />
+            <img src={molly} className={styles.profileImage} />
             <p>Molly Gidfors Haraldsson</p>
             <a href="mailto: mollyha@kth.se">mollyha@kth.se</a>
           </div>
