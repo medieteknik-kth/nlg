@@ -75,7 +75,7 @@ function Contact() {
             <h2>PR</h2>
             <img src={molly} className={styles.profileImage} />
             <p>Molly Gidfors Haraldsson</p>
-            <a href="mailto: mollyha@kth.se">mollyha@kth.se</a>
+            <a href="mailto: gidfors@medieteknik.com">gidfors@medieteknik.com</a>
           </div>
           <div className={styles.card4}>
             <h2>PR</h2>
