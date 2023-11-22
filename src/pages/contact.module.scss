@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image:url('../images/bg.png');
+  background-size: cover;
 }
 .containerCenter {
   margin: 16px;
@@ -54,7 +56,7 @@
   background: $color-background-card;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
-
+  text-wrap: nowrap;
 
 }
 
@@ -80,13 +82,20 @@
 
 }
 
+.invisiblecard {
+  margin: 32px 0;
+  padding: 32px;
+}
+
 
 .profileImage {
   display: block;
-  height: 80px;
+  height: 100px;
   margin: 0 auto;
   margin-top: 32px;
   clip-path: circle();
+  /*border-radius:35px;*/
+  
 }
 
 
@@ -101,24 +110,16 @@
       font-size: 15px;
       }
   }
-  .card {
-    width: 350px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom: 5px;
-    padding:20px;
-  }
-  .card2 {
+  .invisiblecard_wide {
     float: left;
     width: 24%;
     margin: 5px 0;
     padding:20px;
     margin-right: 1%;
-    background: $color-background-card;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 4px;
-    }
-  .card3 {
+  }
+
+  .invisiblecard_thin {
     float: left;
     width: 15.66666667%;
     margin: 5px 0;
@@ -128,16 +129,49 @@
     box-shadow: rgba(100, 100, 110, 0.2) 0px 7px 29px 0px;
     border-radius: 4px;
   }
-  
-  .card4 {
+
+  .card { 
+    width: 350px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 5px;
+    padding:20px;
+  }
+
+  .card2 { /* 1/4 */
+    float: left;
+    width: 24%;
+    margin: 5px 0;
+    padding:20px;
+    margin-right: 1%;
+    background: $color-background-card;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+    text-wrap: nowrap;
+    }
+
+  .card3 { /* 1/6 */
     float: left;
     width: 15.66666667%;
     margin: 5px 0;
     padding: 20px;
     margin-right:1%;
     background: $color-background-card;
+    box-shadow: rgba(100, 100, 110, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+    text-wrap: nowrap;
+  }
+  
+  .card4 { /* 1/5 */
+    float: left;
+    width: 19%;
+    margin: 5px 0;
+    padding: 20px;
+    margin-right:1%;
+    background: $color-background-card;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 4px;
+    text-wrap: nowrap;
   }
   
   .card5 {

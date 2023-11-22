@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import hemsida2 from "../images/hemsida2.jpg"
+import gruppen from "../images/gruppen.jpg"
 import event from "../images/event.jpg"
 import meta from "../images/meta.jpg"
 import internet from "../images/internet.jpg"
@@ -19,7 +19,7 @@ export default function About() {
           <div className={styles.containerCenter}>
             <div>
               <h1>Om oss</h1>
-              <img src={hemsida2} className={styles.groupImage} />
+              <img src={gruppen} className={styles.groupImage} />
               <p><span>Vi är NLG, <a href="https://www.medieteknik.com/">Medietekniksektionens</a> näringslivsgrupp på KTH. </span>
               Medieteknik är en kreativ civilingenjörsutbildning som skolar nästa generations utvecklare, UX-designers, projektledare och spelutvecklare.
                 Vi blandar traditionella ingenjörsämnen med programmering, interaktionsdesign, datorgrafik, visualisering, och maskininlärning bland annat. <a href="https://www.kth.se/utbildning/civilingenjor/medieteknik/medieteknik-civilingenjor-300-hp-1.4150">Här</a> hittar ni mer information om programmet.
