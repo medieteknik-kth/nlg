@@ -22,6 +22,8 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
 
     Öppna kommandotolken/terminalen eller powershell i den klonade mappen och installera alla dependencies.
 
+    Du bör först ha installerat npm, Gatsby, Python och Typescript
+
     ```shell
     cd nlg
     yarn install
@@ -46,7 +48,7 @@ Syftet med hemsidan är främst att ge företag information om vad näringslivsg
     
     Mer information finns [här](https://www.contentful.com/help/find-space-id/) och [här](https://www.contentful.com/developers/docs/references/authentication/#the-content-management-api).
 
-3.  **Starta sidan**
+4.  **Starta sidan**
 
     Starta upp sidan på `http://localhost:8000`
 
