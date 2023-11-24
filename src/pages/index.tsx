@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react"
 import * as styles from "./index.module.scss"
 import { Link } from "gatsby"
-import { FaFacebook, FaInstagram } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 import Layout from "src/components/layout"
 import Timeline from "src/components/timeline/Timeline"
-import background from "src/images/gray_waves.svg"
-import sideimg from "src/images/nlg_med_konturer.svg"
+import background from "src/images/main_background.png"
 
 export default function Index() {
   cleanURL()
@@ -52,7 +51,6 @@ export default function Index() {
               </Link>
             </div>
           </div>
-          <img className={styles.sideimg} src={sideimg} />
         </div>
         <div className={styles.containerMedia}>
           <a id="timeline" href="https://www.facebook.com/NLGmedieteknik">
@@ -60,6 +58,9 @@ export default function Index() {
           </a>
           <a href="https://www.instagram.com/naringsliv_medieteknik/">
             <FaInstagram className={styles.icon} />
+          </a>
+          <a href="https://www.linkedin.com/company/nlgmedieteknik">
+            <FaLinkedin className={styles.icon} />
           </a>
         </div>
       </div>
