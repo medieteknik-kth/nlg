@@ -12,7 +12,12 @@
     height: 90vh;
   }
 }
+.sideimg {
+  display: none;
+  max-width: 18vw;
+}
 .background {
+  display: none;
   z-index: -1;
   position: absolute;
   opacity: 0.2;
@@ -78,6 +83,9 @@
 }
 
 @media (min-width: 800px) {
+  .background {
+    display: initial;
+  }
   .containerLinks {
     flex-direction: row;
   }
@@ -88,6 +96,9 @@
 }
 
 @media (min-width: 1400px) {
+  .sideimg {
+    display: initial;
+  }
   .containerHero {
     padding: 0 64px;
     max-width: 100%;

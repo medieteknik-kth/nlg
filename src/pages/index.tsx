@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 import Layout from "src/components/layout"
 import Timeline from "src/components/timeline/Timeline"
+import sideimg from "src/images/nlg-icon.png"
 import background from "src/images/main_background.png"
 
 export default function Index() {
@@ -51,6 +52,7 @@ export default function Index() {
               </Link>
             </div>
           </div>
+          <img className={styles.sideimg} src={sideimg} />
         </div>
         <div className={styles.containerMedia}>
           <a id="timeline" href="https://www.facebook.com/NLGmedieteknik">
