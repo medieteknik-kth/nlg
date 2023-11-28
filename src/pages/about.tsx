@@ -33,7 +33,7 @@ export default function About() {
               <h2>Olika typer av event</h2>            
               <img src={event} className={styles.eventImage} /> 
               <p><span>Fysiska event</span></p>
-              <p>Tillsammans anordnar vi AW: s, lunchföreläsningar, workshops, studiebesök, tv-spelskväll, skattjakt eller vad helst ni behagar.</p>
+              <p>Tillsammans anordnar vi AW:s, lunchföreläsningar, workshops, studiebesök, tv-spelskväll, skattjakt eller vad helst ni behagar.</p>
               <img src={pub} className={styles.eventImage} />
               <p><span>Företagspub</span></p>
               <p>Våra kanske mest uppskattade events innehåller god öl och mycket mingel. Lär känna medietekniksektionen på företagspub.</p>

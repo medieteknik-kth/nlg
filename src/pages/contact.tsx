@@ -10,8 +10,6 @@ import favour from "../images/profilbilder/hs/favour.png"
 import joel from "../images/profilbilder/hs/joel.png"
 import liza from "../images/profilbilder/hs/liza.png"
 import molly from "../images/profilbilder/hs/molly.png"
-import negar from "../images/profilbilder/hs/negar.png"
-import tingting from "../images/profilbilder/hs/tingting.png"
 import tingting_negar from "../images/profilbilder/hs/tingting_negar.png"
 import yabing from "../images/profilbilder/hs/yabing.png"
 import * as styles from "./contact.module.scss"
@@ -108,8 +106,8 @@ function Contact() {
             <h2>Webbansvarig</h2>
             <img src={erik} className={styles.profileImage} />
             <p>Erik Sevelin</p>
-            <a href="mailto: esevelin@kth.se">
-            esevelin@kth.se
+            <a href="mailto: erik@medieteknik.com">
+            erik@medieteknik.com
             </a>
           </div>
         </div>
