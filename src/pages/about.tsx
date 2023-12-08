@@ -3,11 +3,11 @@ import Layout from "../components/layout"
 import gruppen from "../images/gruppen.jpg"
 import event from "../images/event.jpg"
 import meta from "../images/meta.jpg"
-import internet from "../images/internet.jpg"
-import digital from "../images/digital.jpg"
+import internet from "../images/internet3.png"
+//import digital from "../images/digital.jpg"
 import pub from "../images/pub.jpg"
 import * as styles from "./about.module.scss"
-import Pdf from '../images/Prospekt.pdf'
+//import Pdf from '../images/Prospekt.pdf'
 
 //Länk till pdf:
 //<a href = {Pdf} target = "_blank">Här</a> -->
@@ -42,8 +42,8 @@ export default function About() {
               <p>I vår sektionslokal META rör sig hundratals studenter från medietekniksektionen och datasektionen varje dag. Vill ni hänga med oss? Då är en monter i META perfekt för er.</p>
               <img src={internet} className={styles.eventImage} />
               <p><span>Annonsera</span></p>
-              <p>Vill ni annonsera om Ex-jobb, sommarjobb, traineeplatser, events eller något annat som skulle intressera en medieteknikstudent? Genom vår <a href="https://www.facebook.com/NLGmedieteknik">Facebook </a>
-               och <a href="https://www.instagram.com/naringsliv_medieteknik/">Instagram</a> når ni hela sektionen.</p>
+              <p>Vill ni annonsera om Ex-jobb, sommarjobb, traineeplatser, events eller något annat som skulle intressera en medieteknikstudent? Genom vår <a href="https://www.facebook.com/NLGmedieteknik">Facebook</a>
+              , <a href="https://www.instagram.com/naringsliv_medieteknik/">Instagram</a> och <a href="https://www.linkedin.com/company/nlgmedieteknik">LinkedIn</a> når ni hela sektionen.</p>
             </div>
           </div>
         </div>
