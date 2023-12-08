@@ -1,0 +1,18 @@
+{
+    "footer": {
+        "contactText": "Contact",
+        "linkTab": {
+            "links": "Links",
+            "index": "Home",
+            "contact": "Collaborations",
+            "about": "About us"
+        },
+        "socials": "Socials"
+    },
+    "header": {
+        "index": "Home",
+        "timeline": "Timeline",
+        "contact": "Collaborations",
+        "about": "About us"
+    }
+}

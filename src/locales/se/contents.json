@@ -1,0 +1,18 @@
+{
+    "footer": {
+        "contactText": "Kontakt",
+        "linkTab": {
+            "links": "Länkar",
+            "index": "Hem",
+            "contact": "Samarbete",
+            "about": "Om oss"
+        },
+        "socials": "Socialt"
+    },
+    "header": {
+        "index": "Hem",
+        "timeline": "Tidslinje",
+        "contact": "Samarbete",
+        "about": "Om oss"
+    }
+}
